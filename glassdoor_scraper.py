@@ -75,7 +75,7 @@ def get_jobs(keyword, num_jobs, verbose, path, sleep_time):
                     time.sleep(5)
 
             try:
-                salary_estimate = driver.find_element_by_xpath('.//span[@class="gray salary"]').text
+                salary_estimate = driver.find_element_by_xpath('//*[@id="HeroHeaderModule"]/div[3]/div[1]/div[4]/span').text
             except NoSuchElementException:
                 salary_estimate = -1 #You need to set a "not found value. It's important."
             
